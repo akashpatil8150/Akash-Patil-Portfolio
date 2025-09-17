@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Akash Jaywant Patil • Data Analytics & ML</title>
+  <meta name="description" content="Portfolio of Akash Jaywant Patil, Data Analyst and Machine Learning enthusiast." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#home">AP</a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Akash Jaywant Patil</h1>
+        <p class="tagline">Data Analyst • Machine Learning Enthusiast</p>
+        <p class="bio">
+          Hi, I'm Akash Patil — a passionate Data Analyst and Machine Learning enthusiast with a strong foundation in Python, SQL, and Data Visualization. I enjoy working on projects that involve data preprocessing, feature engineering, and building predictive models. My goal is to apply analytics and AI to solve real-world challenges, deliver insights, and create smart solutions. Currently exploring Power BI, Streamlit, and Flask for deploying interactive analytics applications.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="#contact">Get in Touch</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="assets/profile.jpg" alt="Portrait of Akash Jaywant Patil" onerror="this.style.display='none'" />
+      </div>
+    </div>
+  </main>
+
+  <section id="skills" class="section">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul class="chips">
+        <li>Python</li>
+        <li>SQL</li>
+        <li>Pandas</li>
+        <li>NumPy</li>
+        <li>Scikit-learn</li>
+        <li>Data Visualization</li>
+        <li>Matplotlib</li>
+        <li>Seaborn</li>
+        <li>Power BI</li>
+        <li>Streamlit</li>
+        <li>Flask</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects" class="section alt">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <article class="card">
+          <h3>Project 1: Crop Recommendation System</h3>
+          <p>
+            Supervised ML to recommend optimal crops based on soil nutrients and environmental factors.
+            Includes data cleaning, feature engineering, and model benchmarking.
+          </p>
+          <div class="meta">
+            <span>Python • Pandas • scikit-learn</span>
+          </div>
+          <div class="actions">
+            <a class="btn small" href="#" target="_blank" rel="noopener">Repo</a>
+            <a class="btn small outline" href="#" target="_blank" rel="noopener">Live</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Project 2: Interactive Analytics App</h3>
+          <p>
+            End-to-end data analysis app with interactive dashboards and model insights.
+            Deployed with Streamlit/Flask; includes exploratory analysis and predictive components.
+          </p>
+          <div class="meta">
+            <span>Python • Streamlit/Flask • Power BI (optional)</span>
+          </div>
+          <div class="actions">
+            <a class="btn small" href="#" target="_blank" rel="noopener">Repo</a>
+            <a class="btn small outline" href="#" target="_blank" rel="noopener">Live</a>
+          </div>
+        </article>
+      </div>
+      <p class="note">Replace the placeholder links above with your GitHub repository and live demo URLs.</p>
+    </div>
+  </section>
+
+  <section id="education" class="section">
+    <div class="container">
+      <h2>Education</h2>
+      <div class="edu-item">
+        <h3>MCS (Data Analytics) — Final Year</h3>
+        <p>Focused on applied statistics, machine learning, data engineering, and visualization.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About</h2>
+      <p>
+        I enjoy turning raw data into clear, actionable insights and building tools
+        that help people make better decisions. I'm actively seeking opportunities
+        where I can contribute to analytics, ML, and data-driven products.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="section alt">
+    <div class="container">
+      <h2>Contact</h2>
+      <ul class="contact-list">
+        <li>Email: <a href="mailto:akashpatil@example.com">akashpatil@example.com</a></li>
+        <li>GitHub: <a href="https://github.com/" target="_blank" rel="noopener">github.com/your-username</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/" target="_blank" rel="noopener">linkedin.com/in/your-handle</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Akash Jaywant Patil. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
