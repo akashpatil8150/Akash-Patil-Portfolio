@@ -1,11 +1,20 @@
 
 # Akash Jaywant Patil — Portfolio
 
-Simple, responsive portfolio for Data Analytics and ML projects.
+Modern, responsive portfolio built with Tailwind CSS for Data Analytics and ML projects.
+
+## Features
+- ✨ Modern UI with Tailwind CSS
+- 📱 Fully responsive design
+- 🎨 Interactive animations and hover effects
+- 📄 Resume download functionality
+- 🚀 Mobile-optimized navigation
+- ⚡ Fast loading with CDN
 
 ## Update content
 - Edit `index.html` to update bio, add project links, and contact details.
-- Replace `assets/profile.jpg` with your photo (optional).
+- Replace `assets/akash-photo-removebg-preview.jpg` with your photo (optional).
+- **Add your resume**: Place your resume PDF file as `assets/resume.pdf` for download functionality.
 
 ## Deploy on GitHub Pages
 1. Create a new public repository on GitHub named `akash-portfolio` (or any name).
