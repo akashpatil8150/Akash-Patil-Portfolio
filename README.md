@@ -14,7 +14,7 @@ Modern, responsive portfolio built with Tailwind CSS for Data Analytics and ML p
 ## Update content
 - Edit `index.html` to update bio, add project links, and contact details.
 - Replace `assets/akash-photo-removebg-preview.jpg` with your photo (optional).
-- **Add your resume**: Place your resume PDF file as `assets/resume.pdf` for download functionality.
+- **Add your resume**: Place your resume PDF file as `assets/Akash_Patil_Resume.pdf` for download functionality.
 
 ## Deploy on GitHub Pages
 1. Create a new public repository on GitHub named `akash-portfolio` (or any name).
@@ -40,6 +40,3 @@ Modern, responsive portfolio built with Tailwind CSS for Data Analytics and ML p
 
 ## License
 MIT
-
-=======
-# Akash Jaywant Patil — Portfolio
