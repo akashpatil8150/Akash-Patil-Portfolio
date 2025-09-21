@@ -33,10 +33,3 @@ Modern, responsive portfolio built with Tailwind CSS for Data Analytics and ML p
    - Branch: `main`, folder `/root` → Save
 4. Wait ~1 minute; your site will be available at:
    - `https://<your-username>.github.io/<repo>/`
-
-## Customize
-- Colors and spacing are in `styles.css` under `:root` variables.
-- Add more projects by duplicating a `.card` in the Projects section.
-
-## License
-MIT
