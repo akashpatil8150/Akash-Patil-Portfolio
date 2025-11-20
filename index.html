@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
+    
     tailwind.config = {
       theme: {
         extend: {
@@ -167,25 +168,26 @@
     </div>
   </main>
 
-  <section id="skills" class="py-16 scroll-mt-20">
-    <div class="max-w-6xl mx-auto px-5">
-      <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-8 text-center">Skills</h2>
-      <div class="flex flex-wrap justify-center gap-3">
-        <span class="px-4 py-2 rounded-full bg-panel border border-border text-text-primary font-medium hover:bg-brand/10 hover:border-brand/50 transition-all duration-200 hover:scale-105">Python</span>
-        <span class="px-4 py-2 rounded-full bg-panel border border-border text-text-primary font-medium hover:bg-brand/10 hover:border-brand/50 transition-all duration-200 hover:scale-105">SQL</span>
-        <span class="px-4 py-2 rounded-full bg-panel border border-border text-text-primary font-medium hover:bg-brand/10 hover:border-brand/50 transition-all duration-200 hover:scale-105">Pandas</span>
-        <span class="px-4 py-2 rounded-full bg-panel border border-border text-text-primary font-medium hover:bg-brand/10 hover:border-brand/50 transition-all duration-200 hover:scale-105">NumPy</span>
-        <span class="px-4 py-2 rounded-full bg-panel border border-border text-text-primary font-medium hover:bg-brand/10 hover:border-brand/50 transition-all duration-200 hover:scale-105">Scikit-learn</span>
-        <span class="px-4 py-2 rounded-full bg-panel border border-border text-text-primary font-medium hover:bg-brand/10 hover:border-brand/50 transition-all duration-200 hover:scale-105">Data Visualization</span>
-        <span class="px-4 py-2 rounded-full bg-panel border border-border text-text-primary font-medium hover:bg-brand/10 hover:border-brand/50 transition-all duration-200 hover:scale-105">Matplotlib</span>
-        <span class="px-4 py-2 rounded-full bg-panel border border-border text-text-primary font-medium hover:bg-brand/10 hover:border-brand/50 transition-all duration-200 hover:scale-105">Seaborn</span>
-        <span class="px-4 py-2 rounded-full bg-panel border border-border text-text-primary font-medium hover:bg-brand/10 hover:border-brand/50 transition-all duration-200 hover:scale-105">Power BI</span>
-        <span class="px-4 py-2 rounded-full bg-panel border border-border text-text-primary font-medium hover:bg-brand/10 hover:border-brand/50 transition-all duration-200 hover:scale-105">Streamlit</span>
-        <span class="px-4 py-2 rounded-full bg-panel border border-border text-text-primary font-medium hover:bg-brand/10 hover:border-brand/50 transition-all duration-200 hover:scale-105">Flask</span>
-        <span class="px-4 py-2 rounded-full bg-panel border border-border text-text-primary font-medium hover:bg-brand/10 hover:border-brand/50 transition-all duration-200 hover:scale-105">Hadoop</span>
-      </div>
+  <section id="skills" class="py-16 scroll-mt-20 relative overflow-hidden">
+  <div class="max-w-6xl mx-auto px-5">
+    <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-12 text-center">Skills</h2>
+    <div class="skills-container relative flex flex-wrap justify-center gap-10">
+      <div class="skill-bubble">Python</div>
+      <div class="skill-bubble">SQL</div>
+      <div class="skill-bubble">Pandas</div>
+      <div class="skill-bubble">NumPy</div>
+      <div class="skill-bubble">Scikit-learn</div>
+      <div class="skill-bubble">Power BI</div>
+      <div class="skill-bubble">Streamlit</div>
+      <div class="skill-bubble">Flask</div>
+      <div class="skill-bubble">Data Viz</div>
+      <div class="skill-bubble">Matplotlib</div>
+      <div class="skill-bubble">Seaborn</div>
+      <div class="skill-bubble">Hadoop</div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <section id="projects" class="py-16 bg-bg-primary/50 scroll-mt-20">
     <div class="max-w-6xl mx-auto px-5">
@@ -377,6 +379,59 @@
       observer.observe(section);
     });
   </script>
+
+  <style>
+  .skill-bubble {
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    background: #12161a;
+    border: 2px solid #4f8cff75; /* Slight neon border */
+
+    color: #e6eef7;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* Floating up & down only */
+    animation: softFloat 6s ease-in-out infinite;
+
+    /* Neon glow */
+    box-shadow:
+      0 0 12px rgba(79, 140, 255, 0.45),
+      0 0 25px rgba(79, 140, 255, 0.25);
+
+    transition: transform 0.35s, box-shadow 0.35s, border-color 0.35s;
+  }
+
+  /* Hover effect: Bigger + Stronger Neon */
+  .skill-bubble:hover {
+    transform: scale(1.22) translateY(-12px);
+    border-color: #4f8cff;
+    box-shadow:
+      0 0 20px rgba(79, 140, 255, 0.8),
+      0 0 45px rgba(79, 140, 255, 0.6);
+  }
+
+  /* Smooth floating animation only */
+  @keyframes softFloat {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-16px); }
+    100% { transform: translateY(0px); }
+  }
+
+  /* Timing stagger for natural motion */
+  .skill-bubble:nth-child(odd) {
+    animation-delay: .45s;
+  }
+</style>
+
+
+
+
+
  </body>
  </html>
 
