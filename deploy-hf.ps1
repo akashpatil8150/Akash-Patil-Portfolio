@@ -14,7 +14,7 @@ if ($SpaceUrl.StartsWith("https://") -and -not $SpaceUrl.EndsWith(".git")) {
 }
 
 Write-Host "`n1. Running production build..." -ForegroundColor Cyan
-npm run build
+& npm.cmd run build
 
 if ($LASTEXITCODE -ne 0) {
     Write-Error "Production build failed."
