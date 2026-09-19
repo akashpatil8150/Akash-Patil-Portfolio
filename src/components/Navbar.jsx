@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import resumePdf from '../../assets/Akash_Patil_Resume.pdf'
+import { RESUME_URL } from '../data/resume'
 import { FaDownload, FaBars, FaTimes, FaTerminal } from 'react-icons/fa'
 
 const links = [
@@ -95,7 +95,9 @@ export default function Navbar() {
           {/* Right Action: Resume & Mobile toggle */}
           <div className="flex items-center gap-3">
             <a
-              href={resumePdf}
+              href={RESUME_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               download="Akash_Patil_Resume.pdf"
               className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-brand text-white text-xs font-bold hover:bg-brand/90 transition-all hover:scale-105 shadow-md shadow-brand/25 cursor-pointer"
             >
@@ -138,7 +140,9 @@ export default function Navbar() {
               ))}
               <div className="pt-2">
                 <a 
-                  href={resumePdf} 
+                  href={RESUME_URL} 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   download="Akash_Patil_Resume.pdf" 
                   className="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-xl bg-brand text-white text-xs font-bold text-center"
                 >

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { useTyped } from '../hooks/useTyped'
 import akashPhoto from '../../assets/akash-photo-removebg-preview.jpg'
-import resumePdf from '../../assets/Akash_Patil_Resume.pdf'
+import { RESUME_URL } from '../data/resume'
 import { FaArrowRight, FaDownload, FaEnvelope, FaBuilding, FaGraduationCap } from 'react-icons/fa'
 
 const roles = [
@@ -109,7 +109,9 @@ export default function Hero() {
               </button>
 
               <a
-                href={resumePdf}
+                href={RESUME_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 download="Akash_Patil_Resume.pdf"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-2/10 border border-brand-2/30 text-brand-2 text-sm font-semibold hover:bg-brand-2/20 transition-all duration-200 cursor-pointer"
               >

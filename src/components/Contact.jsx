@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import resumePdf from '../../assets/Akash_Patil_Resume.pdf'
+import { RESUME_URL } from '../data/resume'
 import { 
   FaEnvelope, FaGithub, FaLinkedin, FaArrowRight, 
   FaDownload, FaComments, FaCheck
@@ -120,7 +120,9 @@ export default function Contact() {
               </p>
             </div>
             <a
-              href={resumePdf}
+              href={RESUME_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               download="Akash_Patil_Resume.pdf"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand text-white font-semibold text-xs sm:text-sm hover:bg-brand/90 transition-all shadow-lg shadow-brand/20 shrink-0"
             >
