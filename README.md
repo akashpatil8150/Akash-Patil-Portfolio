@@ -1,35 +1,39 @@
+# Akash Patil — AI Developer / AI Engineer Portfolio
 
-# Akash Jaywant Patil — Portfolio
+A futuristic, high-performance portfolio engineered for an **AI Developer / AI Engineer**. Built with React, Vite, Tailwind CSS, and Framer Motion, featuring 100% factual project case studies, an interactive skills physics sandbox, and verified enterprise experience.
 
-Modern, responsive portfolio built with Tailwind CSS for Data Analytics and ML projects.
+## ✨ Portfolio Structure
 
-## Features
-- ✨ Modern UI with Tailwind CSS
-- 📱 Fully responsive design
-- 🎨 Interactive animations and hover effects
-- 📄 Resume download functionality
-- 🚀 Mobile-optimized navigation
-- ⚡ Fast loading with CDN
+1. **Hero**: AI Developer / AI Engineer identity, Python AI Internship credibility at WERQ Labs Pvt. Ltd., MSc Data Analytics, and primary CTAs for Projects, Resume, and Contact.
+2. **About & Experience**: Highlighting enterprise internship at WERQ Labs Pvt. Ltd. (June 16, 2026 – September 16, 2026) and core engineering principles.
+3. **Flagship Projects**: Interactive architecture case studies:
+   - **Agentic AI Travel Planner**: Multi-agent orchestration engine with FastAPI, specialized domain agents, constraint verification, caching, and observability.
+   - **AI Voice Agent for ISP**: Real-time conversational voice support agent with LangGraph, Groq/Whisper STT, Kokoro TTS, and MongoDB ticket lifecycle handling.
+   - **RAG Tourism Chatbot – Kolhapur**: Domain-specific tourism RAG architecture with Sentence Transformers, FAISS vector search, MongoDB, and Groq/Llama 3.
+4. **Skills & AI Tooling**: Categorized production stacks plus an interactive, conflict-free physics sandbox with tossable skill nodes.
+5. **Additional Work**: Secondary open-source projects & Hugging Face spaces (*Talent AI*, *DeepClean*, *NER System*, *Pare AI*, *Crop Recommendation*) with direct live demo and GitHub links.
+6. **Education**: MSc Data Analytics (Graduated April 2026).
+7. **Contact**: Direct email, LinkedIn, GitHub, Hugging Face, and resume download.
 
-## Update content
-- Edit `index.html` to update bio, add project links, and contact details.
-- Replace `assets/akash-photo-removebg-preview.jpg` with your photo (optional).
-- **Add your resume**: Place your resume PDF file as `assets/Akash_Patil_Resume.pdf` for download functionality.
+## 🛠️ Tech Stack
 
-## Deploy on GitHub Pages
-1. Create a new public repository on GitHub named `akash-portfolio` (or any name).
-2. Push this folder to that repository.
-   - If Git is installed:
-     ```bash
-     git init
-     git add .
-     git commit -m "feat: initial portfolio"
-     git branch -M main
-     git remote add origin https://github.com/<your-username>/<repo>.git
-     git push -u origin main
-     ```
-3. In GitHub → Settings → Pages:
-   - Source: `Deploy from a branch`
-   - Branch: `main`, folder `/root` → Save
-4. Wait ~1 minute; your site will be available at:
-   - `https://<your-username>.github.io/<repo>/`
+- **Framework**: React 18 + Vite
+- **Styling**: Tailwind CSS 3.4
+- **Animations & Physics**: Framer Motion 11
+- **Icons**: React Icons (FontAwesome & SimpleIcons)
+
+## 🚀 Development & Build
+
+```bash
+# Install dependencies
+npm install
+
+# Run local development server
+npm run dev
+
+# Build production bundle
+npm run build
+
+# Preview production build
+npm run preview
+```
