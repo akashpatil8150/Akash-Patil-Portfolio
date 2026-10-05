@@ -14,10 +14,18 @@
     color: #e8f0fe;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     overflow-x: hidden;
+    letter-spacing: -0.01em;
   }
   a { 
     text-decoration: none; 
   }
+  
+  /* Focus visible accessibility */
+  :focus-visible {
+    outline: 2px solid #4f8cff;
+    outline-offset: 3px;
+  }
+
   ::-webkit-scrollbar { 
     width: 6px; 
     height: 6px;
@@ -36,37 +44,42 @@
 
 @layer components {
   .section-label {
-    @apply inline-block px-4 py-1.5 rounded-full text-xs font-semibold font-mono tracking-widest uppercase mb-4;
+    @apply inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold font-mono tracking-widest uppercase mb-4 transition-all;
   }
   .card {
     @apply bg-panel border border-border rounded-3xl transition-all duration-300;
   }
   .btn-primary {
-    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand text-white text-sm font-semibold transition-all duration-200 hover:bg-brand/85 hover:scale-105 shadow-lg shadow-brand/25;
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-brand text-white text-xs sm:text-sm font-bold transition-all duration-200 hover:bg-brand/90 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-brand/20;
   }
   .btn-outline {
-    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-border-2 text-primary text-sm font-semibold transition-all duration-200 hover:bg-panel hover:border-brand/40;
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl border border-border-2 text-primary text-xs sm:text-sm font-semibold transition-all duration-200 hover:bg-panel hover:border-brand/40 active:scale-[0.98];
   }
   .skill-pill {
     @apply px-3 py-1.5 rounded-xl text-xs font-semibold border transition-all;
   }
-  .nav-link {
-    @apply px-4 py-2 rounded-lg text-muted text-xs font-semibold transition-all duration-200 hover:text-primary hover:bg-panel/80 cursor-pointer;
-  }
 }
 
-/* Particle canvas */
+/* Background canvas */
 #particles-canvas {
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.35;
+  opacity: 0.3;
+}
+
+/* Subtle Technical Grid Overlay */
+.bg-tech-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
 }
 
 /* Gradient text utilities */
 .gradient-text {
-  background: linear-gradient(135deg, #4f8cff 0%, #818cf8 50%, #a855f7 100%);
+  background: linear-gradient(135deg, #4f8cff 0%, #818cf8 40%, #a855f7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -81,14 +94,14 @@
 
 /* Atmospheric glow ring */
 .glow-ring {
-  animation: glowRing 4s ease-in-out infinite;
+  animation: glowRing 5s ease-in-out infinite;
 }
 @keyframes glowRing {
   0%, 100% { 
     box-shadow: 0 0 35px rgba(79,140,255,0.2), 0 0 70px rgba(168,85,247,0.1); 
   }
   50% { 
-    box-shadow: 0 0 60px rgba(79,140,255,0.4), 0 0 110px rgba(168,85,247,0.25); 
+    box-shadow: 0 0 65px rgba(79,140,255,0.35), 0 0 110px rgba(168,85,247,0.2); 
   }
 }
 
@@ -96,9 +109,9 @@
 .typed-cursor {
   display: inline-block;
   width: 2px;
-  height: 1.1em;
+  height: 1.15em;
   background: #4f8cff;
-  margin-left: 2px;
+  margin-left: 3px;
   vertical-align: text-bottom;
   animation: blink 1s step-end infinite;
 }
@@ -109,16 +122,29 @@
 
 /* Custom internal scrollbars */
 .custom-scrollbar::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
 }
 .custom-scrollbar::-webkit-scrollbar-track {
   background: rgba(10, 13, 18, 0.6);
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(79, 140, 255, 0.3);
+  background: rgba(79, 140, 255, 0.25);
   border-radius: 4px;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgba(79, 140, 255, 0.6);
+  background: rgba(79, 140, 255, 0.55);
+}
+
+/* Reduced motion preference respect */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  #particles-canvas {
+    display: none;
+  }
 }

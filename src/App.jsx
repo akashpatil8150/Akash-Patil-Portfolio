@@ -7,13 +7,17 @@ import AdditionalWork from './components/AdditionalWork'
 import Education from './components/Education'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import ScrollProgress from './components/ui/ScrollProgress'
 import { useParticles } from './hooks/useParticles'
 
 export default function App() {
   useParticles('particles-canvas')
 
   return (
-    <div className="relative min-h-screen bg-bg text-primary font-sans overflow-x-hidden">
+    <div className="relative min-h-screen bg-bg text-primary font-sans overflow-x-hidden selection:bg-brand/30 selection:text-white">
+      {/* Top scroll progress indicator */}
+      <ScrollProgress />
+
       {/* Background particle network canvas */}
       <canvas id="particles-canvas" />
 
